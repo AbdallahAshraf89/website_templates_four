@@ -1,0 +1,922 @@
+:root {
+    --MainColor: #fba72d;
+}
+
+/* global rules */
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+m-0 {
+    margin: 0;
+}
+
+body {
+    background-image: url(../imgs/Black\ White\ Ink\ Watercolor\ Background\ Wallpaper\ Image\ For\ Free\ Download\ -\ Pngtree.jpeg);
+    background-size: cover;
+    /* height: 10000px; */
+    caret-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+img::selection {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: gainsboro;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--MainColor);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: 70%;
+}
+
+/* start componant */
+
+ul.main {
+    position: relative;
+    margin: -4px 0 0;
+    background-color: black;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+ul.main .dam::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--MainColor);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 69px;
+}
+
+ul.main .dam::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--MainColor);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 351px;
+}
+
+ul.main .dam {
+    margin: 100px 0;
+}
+
+ul.main li {
+    font-size: 13px;
+    letter-spacing: 1.8px;
+    position: relative;
+}
+
+ul.main li:first-child::after {
+    content: "";
+    background-color: var(--MainColor);
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    top: -150%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+ul.main li::before {
+    content: "";
+    background-color: var(--MainColor);
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+ul.main li:not(:first-child) {
+    margin-top: 27px;
+}
+
+ul.main li:not(.active):hover a {
+    opacity: 70%;
+}
+
+ul.main li a {
+    color: var(--MainColor);
+    transition: .3s;
+    width: fit-content;
+}
+
+ul.main li.active a {
+    color: white;
+}
+
+/* ========================== */
+
+ul.sction {
+    position: absolute;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    padding: 5px;
+    height: 230px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    list-style: none;
+    color: var(--MainColor);
+    background-color: black;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul.sction li {
+    position: relative;
+}
+
+ul.sction li:not(:last-child):before{
+    content: "";
+    position: absolute;
+    background: var(--MainColor);
+    height: 12px;
+    width: 1px;
+    left: 50%;
+    transform: translate(-50%, 22px);
+    border-radius: 10px;
+}
+
+ul.sction li a{
+    color: var(--MainColor);
+}
+
+ul.sction li.active i  {
+    color: white;
+}
+
+/* end componant */
+
+/* start countainer */
+
+.countainer{
+    margin: 50px 100px;
+    background-color: white;
+    color: black;
+}
+
+/* end countainer */
+
+/* start welcome */
+
+.hello {
+    display: flex;
+    box-shadow: 1px 5px 20px 3px black;
+}
+
+.hello .text {
+    flex-basis: 50%;
+    padding: 17% 36px 0 100px
+}
+
+.hello .text h2 {
+    font-weight: 900;
+    margin: 0;
+    font-size: 32px;
+}
+
+.hello .text h1 {
+    margin: 0 0 10px 0;
+    font-size: 50px;
+}
+
+.hello .text h1 span.name {
+    font-family: cursive;
+    color: var(--MainColor);
+    font-size: 50px;
+}
+
+@media (max-width: 1195px) {
+    .hello .text {
+        padding: 15% 16px 20px 63px
+    }
+}
+
+@media (max-width: 1195px) {
+    .hello .text h2 {
+        font-size: 22px;
+    }
+    
+    .hello .text h1 {
+        font-size: 30px;
+    }
+    
+    .hello .text h1 span.name {
+        font-size: 28px;
+    }
+}
+
+.hello .text span.work{
+    font-weight: bold;
+    background-color: var(--MainColor);
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.hello .text p {
+    font-size: 12px;
+    margin-bottom: 13px;
+}
+
+.hello .text a {
+    color: white;
+    margin: 10px 0 0;
+    padding: 7px;
+    background-color: var(--MainColor);
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.hello .photo {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.hello .photo img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+}
+
+/* end welcome */
+
+/* start about */
+
+.about {
+    box-shadow: 1px 5px 20px 3px black;
+    background-color: #dddddd;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.about .left {
+    flex-basis: 20%;
+    max-height: 100%;
+}
+
+.about .left img {
+    width: 100%;
+}
+
+.about .right {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .right h1 {
+    font-size: 50px;
+    margin: 80px auto 20px;
+    letter-spacing: 3.8px;
+    padding: 10px 25%;
+    border: 1px solid black;
+    width: fit-content;
+    font-weight: 900;
+}
+
+.about .right .content {
+    padding: 0 10%;
+}
+
+.about .right .content .text p {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.about .right .content .boxes {
+    display: flex;
+    margin: 20px 0 0;
+}
+
+.about .right .content .boxes .details {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.about .right .content .boxes .details .box {
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .right .content .boxes .details .box h4 {
+    color: var(--MainColor);
+    font-size: 50px;
+    margin: 0;
+}
+
+.about .right .content .boxes .details .box span {
+    color: white;
+    font-size: 10px;
+}
+
+.about .right .content .boxes .work {
+    flex-basis: 30%;
+}
+
+.about .right .content .boxes .work h3 {
+    margin: 10px 0 0;
+    padding-left: 6%;
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.about .right .content .boxes .work .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .right .content .boxes .work .text .box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about .right .content .boxes .work .text .box img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.about .right .content .boxes .work .text .box .text h4 {
+    margin: 0;
+}
+
+.about .right .content .boxes .work .text .box .text span {
+    font-size: 10px;
+    margin: 8px 0 0;
+}
+
+/* end about */
+
+/* start resume */
+
+.boxes-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #a9a9a9;
+}
+
+.boxes-section .box {
+    position: relative;
+    flex-basis: calc(50% - 10px);
+    overflow: hidden;
+    box-shadow: 1px 5px 20px 3px black;
+    background-color: #dddddd;
+    height: 315px;
+}
+
+.boxes-section .box-resume .right h1 {
+    font-size: 30px;
+    margin: 30px auto 20px;
+    letter-spacing: 3.8px;
+    padding: 10px 25%;
+    border: 1px solid black;
+    width: fit-content;
+    font-weight: 900;
+}
+
+.boxes-section .box-resume .right .boxes {
+    display: flex;
+    margin: 0 40px 0 30px;
+}
+
+.boxes-section .box-resume .right h3 {
+    margin: 0 0 5px 30px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.boxes-section .box-resume .right .boxes .box {
+    font-size: 10px;
+    height: 100%;
+    box-shadow: none;
+}
+
+.boxes-section .box-resume .right .boxes .box span {
+    font-size: 6px;
+    padding: 2px 3px;
+    background-color: var(--MainColor);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boxes-section .box-resume .right .boxes .box h4 {
+    margin: 5px 0 2px;
+    font-size: 8px;
+    width: fit-content;
+}
+
+.boxes-section .box-resume .right .boxes .box p {
+    margin: 0;
+    color: #777;
+    font-size: 8px;
+}
+
+/* === */
+
+.boxes-section .box-resume .right .top .boxes {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #77777787;
+}
+
+.boxes-section .box-resume .right .bottom {
+    margin: 10px 0 0;
+}
+
+/* ============== */
+
+.boxes-section .box-portfolio .right {
+    position: relative;
+}
+
+.boxes-section .box-portfolio .right h1 {
+    font-size: 30px;
+    margin: 30px auto 20px;
+    letter-spacing: 3.8px;
+    padding: 10px 18%;
+    border: 1px solid black;
+    width: fit-content;
+    font-weight: 900;
+}
+
+.boxes-section .box-portfolio .right ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 30px 20px 0;
+}
+
+.boxes-section .box-portfolio .right ul li {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.boxes-section .box-portfolio .right ul li.active {
+    color: white;
+}
+
+.boxes-section .box-portfolio:not(.portfolio-all) .right .photos  {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.boxes-section .portfolio-all .right .photos  {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.boxes-section .portfolio-all .right .photos  {
+    width: 77%;
+}
+
+.boxes-section .box-portfolio .right .photos img {
+    width: 50px;
+    height: 50px;
+}
+
+.boxes-section .box-portfolio:not(.portfolio-all) .right .photos img  {
+    flex-basis: 47.8%;
+}
+
+.boxes-section .portfolio-all .right .photos img  {
+    flex-basis: 23%;
+    width: 40px !important;
+    height: 45px !important;
+}
+
+/* ========================================================= */
+
+.boxes-section  ul.main {
+    height: 67%;
+}
+
+.boxes-section ul.main .dam {
+    margin: auto;
+}
+
+.boxes-section ul.main .dam::before {
+    top: 10%;
+    width: 3px;
+    height: 3px;
+}
+
+.boxes-section ul.main .dam::after {
+    width: 3px;
+    height: 3px;
+    top: 82%;
+}
+
+.boxes-section ul.main .dam li {
+    font-size: 6px;
+}
+
+.boxes-section ul.main .dam li::before {
+    top: 0%;
+}
+
+.boxes-section ul.main .dam li:first-child::after {
+    height: 10px;
+    top: -170%;
+    width: .5px;
+}
+
+.boxes-section ul.main .dam li::before {
+    height: 10px;
+    top: 10px;
+    width: 0.5px;
+}
+
+.boxes-section ul.main .dam li:not(:first-child) {
+    margin: 15px;
+}
+
+/* ======================================== */
+
+.boxes-section ul.sction {
+    padding: 2px 5px;
+    height: 150px;
+    right: 10px;
+    top: 50%;
+}
+
+.boxes-section ul.sction li:not(:last-child):before{
+    height: 9px;
+    transform: translate(-50%, 19px);
+}
+
+.boxes-section ul.sction li i  {
+    font-size: 10px;
+}
+
+/* end resume */
+
+/* start portfoilo */
+
+.portfolio {
+    box-shadow: 1px 5px 20px 3px black;
+    background-color: #dddddd;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .left {
+    flex-basis: 20%;
+    max-height: 100%;
+}
+
+.portfolio .left img {
+    width: 100%;
+}
+
+.portfolio .right {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;   
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio .right h1 {
+    font-size: 60px;
+    margin: 80px auto;
+    letter-spacing: 3.8px;
+    padding: 10px 25%;
+    border: 1px solid black;
+    width: fit-content;
+    font-weight: 900;
+}
+
+.portfolio .right ul.suffle {
+    display: flex;
+    margin: -20px auto 35px;
+}
+
+.portfolio .right ul.suffle li {
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+.portfolio .right ul.suffle li.active {
+    color: white;
+}
+
+.portfolio .right .photos {
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+.portfolio .right .photos img {
+    width: 120px;
+    height: 130px;
+    flex-basis: 48%;
+}
+
+/* end portfoilo */
+
+/* start content & testimonials */
+
+.add {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #a9a9a9;
+}
+
+.add .last-box {
+    display: flex;
+    position: relative;
+    flex-basis: calc(50% - 10px);
+    overflow: hidden;
+    box-shadow: 1px 5px 20px 3px black;
+    background-color: #dddddd;
+    height: 315px;
+}
+
+.add .last-box .left {
+    flex-basis: 20%;
+}
+
+.add .last-box .left ul.main {
+    height: 67%;
+}
+
+.add .last-box .left ul.main .dam {
+    margin: auto;
+}
+
+.add .last-box .left ul.main .dam::before {
+    top: 10%;
+    width: 3px;
+    height: 3px;
+}
+
+.add .last-box .left ul.main .dam::after {
+    width: 3px;
+    height: 3px;
+    top: 82%;
+}
+
+.add .last-box .left ul.main .dam li {
+    font-size: 6px;
+}
+
+.add .last-box .left ul.main .dam li::before {
+    top: 0%;
+}
+
+.add .last-box .left ul.main .dam li:first-child::after {
+    height: 10px;
+    top: -170%;
+    width: .5px;
+}
+
+.add .last-box .left ul.main .dam li::before {
+    height: 10px;
+    top: 10px;
+    width: 0.5px;
+}
+
+.add .last-box .left ul.main .dam li:not(:first-child) {
+    margin: 15px;
+}
+
+.add .last-box .right {
+    flex-basis: 80%;
+}
+
+.add .last-box .right h1 {
+    font-size: 30px;
+    margin: 30px auto 20px;
+    letter-spacing: 3.8px;
+    padding: 10px 10%;
+    border: 1px solid black;
+    width: fit-content;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* ========================================= */
+
+.add .testimonials .right .contain {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 48px;
+    gap: 10px;
+}
+
+.add .testimonials .right .contain .box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 48.4%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.add .testimonials .right .contain .box .top {
+    display: flex;
+}
+
+.add .testimonials .right .contain .box .top img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 10px;
+}
+
+.add .testimonials .right .contain .box .top .text h4 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--MainColor);
+}
+
+.add .testimonials .right .contain .box .top .text span {
+    position: relative;
+    top: -5px;
+    font-size: .4rem;
+}
+
+.add .testimonials .right .contain .box .top .text p {
+    margin: 0;
+    font-size: .25rem;
+    opacity: 50%;
+    line-height: .5rem;
+    position: relative;
+    top: -5px;
+}
+
+.add .testimonials .right .contain .bottom {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add .testimonials .right .contain .bottom .icons {
+    display: flex;
+}
+
+.add .testimonials .right .contain .bottom .icons i {
+    font-size: .4rem;
+    margin-right: 6px;
+}
+
+.add .testimonials .right .contain .bottom .details {
+    font-size: .4rem;
+    opacity: 50%;
+}
+
+
+
+/* ========================================= */
+
+.add .contact .right h1 {
+    font-size: 30px;
+    margin: 30px auto 20px;
+    letter-spacing: 3.8px;
+    padding: 10px 22% !important;
+    border: 1px solid black;
+    width: fit-content;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.add .contact .right .contain {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.add .contact .right .contain .text span.active {
+    font-size: .8rem;
+}
+
+.add .contact .right .contain .text p {
+    font-size: .5rem;
+    margin: 4px 0 ;
+}
+
+.add .contact .right .contain .icons  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.add .contact .right .contain .icons .box {
+    display: flex;
+    align-items: center;
+}
+
+.add .contact .right .contain .icons .box i {
+    font-size: 30px;
+    margin-right: 15px;
+}
+.add .contact .right .contain .icons .box .details {
+    line-height: 10px;
+    width: 7rem;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+}
+
+.add .contact .right .contain .icons .box .details span {
+    font-weight: bold;
+    font-size: .4rem;
+}
+
+.add .contact .right .contain h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+/* ==================================================== */
+
+.add ul.sction {
+    padding: 2px 5px;
+    height: 150px;
+    right: 10px;
+    top: 50%;
+}
+
+.add ul.sction li:not(:last-child):before{
+    height: 9px;
+    transform: translate(-50%, 19px);
+}
+
+.add ul.sction li i  {
+    font-size: 10px;
+}
+
+/* end content & testimonials */
